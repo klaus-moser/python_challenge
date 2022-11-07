@@ -36,3 +36,26 @@ def get_digit_num(number) -> int:
         digits += 1
 
     return digits
+
+
+def extract_digits(number) -> list:
+    """
+    Extract all digits before the comma.
+    :param number: Number (int, float)
+    :return: Array of digits.
+    """
+
+    if isinstance(number, str):
+        raise TypeError("Only int, float allowed.")
+
+    if number == 0:
+        return [0]
+
+    digits = []
+    rem_value = number
+
+    while rem_value > 0:
+        rem_value, digit = divmod(rem_value, 10)
+        digits.append(digit)
+
+    return digits

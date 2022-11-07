@@ -27,3 +27,14 @@ def test_get_digit_num_pass(test_input, expected):
 def test_get_digit_num_fail(test_input, expected):
     with pytest.raises(Exception):
         assert get_digit_num(number=test_input) == expected
+
+
+@pytest.mark.parametrize("test_input,expected", [(0, [0]), (1, [1]), (42, [2, 4])])
+def test_extract_digits_pass(test_input, expected):
+    assert extract_digits(number=test_input) == expected
+
+
+@pytest.mark.parametrize("test_input,expected", [("foobar", pytest.raises(TypeError))])
+def test_extract_digits_fail(test_input, expected):
+    with pytest.raises(Exception):
+        assert extract_digits(number=test_input) == expected

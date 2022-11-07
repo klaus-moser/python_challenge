@@ -7,7 +7,7 @@ def get_digit_num_of_decimal(number: int) -> int:
     """
 
     if not isinstance(number, int):  # check type
-        raise Exception("Number is not integer/decimal")
+        raise TypeError("Number is not integer/decimal")
 
     digits = 0
 

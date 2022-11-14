@@ -11,6 +11,7 @@ class TestGrundrechenarten:
     def test_get_digit_num_of_decimal_pass(self, test_input, expected) -> None:
         """
         Method: get_digit_num_of_decimal. Pass.
+
         :param test_input: Input.
         :param expected: Expected result.
         :return:
@@ -28,6 +29,7 @@ class TestGrundrechenarten:
     def test_get_digit_num_of_decimal_fail(self, test_input, expected) -> None:
         """
         Method: get_digit_num_of_decimal. Fail.
+
         :param test_input: Input.
         :param expected: Expected result.
         :return:
@@ -42,6 +44,7 @@ class TestGrundrechenarten:
     def test_get_digit_num_pass(self, test_input, expected) -> None:
         """
         Method: get_digit_num_pass. Pass.
+
         :param test_input: Input.
         :param expected: Expected result.
         :return:
@@ -54,6 +57,7 @@ class TestGrundrechenarten:
     def test_get_digit_num_fail(self, test_input, expected) -> None:
         """
         Method: get_digit_num. Fail.
+
         :param test_input: Input.
         :param expected: Expected result.
         :return:
@@ -67,6 +71,7 @@ class TestGrundrechenarten:
     def test_extract_digits_pass(self, test_input, expected) -> None:
         """
         Method: extract_digits. Pass.
+
         :param test_input: Input.
         :param expected: Expected result.
         :return:
@@ -79,6 +84,7 @@ class TestGrundrechenarten:
     def test_extract_digits_fail(self, test_input, expected) -> None:
         """
         Method: extract_digits. Fail.
+
         :param test_input: Input.
         :param expected: Expected result.
         :return:

@@ -1,6 +1,7 @@
 def get_digit_num_of_decimal(number: int) -> int:
     """
     Get the number of digits of a number through using the modulo.
+
     :param number: Integer number.
     :return: Integer number of digits.
     """
@@ -21,6 +22,7 @@ def get_digit_num(number) -> int:
     """
     Returns the number of whole digits (before the
     comma) of any number (int, float, etc.).
+
     :param number: Any number.
     :return: Integer number.
     """
@@ -41,6 +43,7 @@ def get_digit_num(number) -> int:
 def extract_digits(number) -> list:
     """
     Extract all digits before the comma.
+    
     :param number: Number (int, float)
     :return: Array of digits.
     """

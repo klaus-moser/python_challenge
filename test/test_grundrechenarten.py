@@ -105,7 +105,7 @@ class TestGrundrechenarten:
         """
 
         # act / assert
-        assert expected == find_proper_divisors_set(test_input)
+        assert expected == find_proper_divisors_set(number=test_input)
 
     @pytest.mark.parametrize("test_input,expected", [(24, [1, 2, 3, 4, 6, 8, 12]), (0, []), (-42, [])])
     def test_find_proper_divisors_list(self, test_input, expected) -> None:
@@ -118,4 +118,31 @@ class TestGrundrechenarten:
         """
 
         # act / assert
-        assert expected == find_proper_divisors_list(test_input)
+        assert expected == find_proper_divisors_list(number=test_input)
+
+    @pytest.mark.parametrize("test_input,expected", [([3, 5, 7, 11, 13, 17, 19, 23], True)])
+    def test_is_prime_numbers(self, test_input, expected) -> None:
+        """
+        Method: is_prime_number.
+
+        :param test_input:  Test Input.
+        :param expected:  Expected result.
+        :return:
+        """
+
+        for i in test_input:
+            # act / assert
+            assert is_prime_number(number=i) is True
+
+    @pytest.mark.parametrize("test_input,expected", [(25, [3, 5, 7, 11, 13, 17, 19, 23])])
+    def test_get_prime_numbers(self, test_input, expected) -> None:
+        """
+        Method: get_prime_numbers.
+
+        :param test_input:  Test Input.
+        :param expected:  Expected result.
+        :return:
+        """
+
+        # act / assert
+        assert get_prime_numbers(number=test_input)

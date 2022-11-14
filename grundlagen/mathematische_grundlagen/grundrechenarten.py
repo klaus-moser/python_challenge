@@ -43,7 +43,7 @@ def get_digit_num(number) -> int:
 def extract_digits(number) -> list:
     """
     Extract all digits before the comma.
-    
+
     :param number: Number (int, float)
     :return: Array of digits.
     """
@@ -62,3 +62,33 @@ def extract_digits(number) -> list:
         digits.append(digit)
 
     return digits
+
+
+def find_proper_divisors_set(number: int) -> set:
+    """
+    Find all the divisors of a given number without the
+    number itself.
+
+    :param number: Integer number.
+    :return: Set with all the true divisors.
+    """
+
+    result = set()  # save to set (unordered, no duplicates)
+
+    for i in range(1, number):
+        if number % i == 0:
+            result.add(i)
+
+    return result
+
+
+def find_proper_divisors_list(number: int) -> list:
+    """
+    Find all the divisors of a given number without the
+    number itself.
+
+    :param number:
+    :return:
+    """
+
+    return [i for i in range(1, number) if number % i == 0]

@@ -92,3 +92,28 @@ def find_proper_divisors_list(number: int) -> list:
     """
 
     return [i for i in range(1, number) if number % i == 0]
+
+
+def is_prime_number(number: int) -> bool:
+    """
+    Checks given number for prime status.
+
+    :param number: Integer input.
+    :return: True, if prime.
+    """
+
+    for i in range(2, number // 2 + 1):
+        if number % i == 0:
+            return False
+    return True
+
+
+def get_prime_numbers(number: int) -> list:
+    """
+    Returns a list with all prime numbers in the range(0, number).
+
+    :param number: Given end number.
+    :return: List with all prime numbers.
+    """
+
+    return [i for i in range(number) if is_prime_number(i)]

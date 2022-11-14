@@ -85,7 +85,7 @@ class TestGrundrechenarten:
         """
         Method: extract_digits. Fail.
 
-        :param test_input: Input.
+        :param test_input: Test Input.
         :param expected: Expected result.
         :return:
         """
@@ -93,3 +93,29 @@ class TestGrundrechenarten:
         # assert
         with pytest.raises(Exception):
             assert extract_digits(number=test_input) == expected
+
+    @pytest.mark.parametrize("test_input,expected", [(42, {1, 2, 3, 6, 7, 14, 21}), (0, set()), (-42, set())])
+    def test_find_proper_divisors_set(self, test_input, expected) -> None:
+        """
+        Method: find_proper_divisors_set.
+
+        :param test_input: Test Input.
+        :param expected: Expected result.
+        :return:
+        """
+
+        # act / assert
+        assert expected == find_proper_divisors_set(test_input)
+
+    @pytest.mark.parametrize("test_input,expected", [(24, [1, 2, 3, 4, 6, 8, 12]), (0, []), (-42, [])])
+    def test_find_proper_divisors_list(self, test_input, expected) -> None:
+        """
+        Method: find_proper_divisors_list.
+
+        :param test_input: Test Input.
+        :param expected: Expected result.
+        :return:
+        """
+
+        # act / assert
+        assert expected == find_proper_divisors_list(test_input)
